@@ -1,0 +1,78 @@
+﻿@page "/"
+
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components
+@inject IJSRuntime JS
+
+<PageTitle>Home</PageTitle>
+
+<h1 class="text-center mt-5">Hello, world!</h1>
+<div class="text-center mt-3">
+    <a href="https://github.com/r90ur7" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+            style="width: 50px; height: 50px;">
+        <p>R90ur7</p>
+    </a>
+</div>
+
+<p class="text-center">Desafio da Dio.io</p>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="menuSelect" class="form-label">Menu:</label>
+                <select id="menuSelect" class="form-select" @onchange="HandleSelection">
+                    <option value="">Selecione uma opção</option>
+                    <option value="1">Opção 1</option>
+                    <option value="2">Opção 2</option>
+                    <option value="3">Opção 3</option>
+                    <option value="4">Sair</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-6">
+            <div class="alert alert-info" role="alert">
+                <p class="text-black">@resultado</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private string escolha;
+    private string resultado;
+
+    private void HandleSelection(ChangeEventArgs e)
+    {
+        escolha = e.Value?.ToString() ?? "selecione uma opção";
+        Console.WriteLine($"Opção selecionada: {escolha}");
+
+        switch (escolha)
+        {
+            case "1":
+                resultado = "Você escolheu a Opção 1.";
+                break;
+            case "2":
+                resultado = "Você escolheu a Opção 2.";
+                break;
+            case "3":
+                resultado = "Você escolheu a Opção 3.";
+                break;
+            case "4":
+                resultado = "Saindo...";
+                JS.InvokeVoidAsync("alert", "Saindo...");
+                JS.InvokeVoidAsync("window.close");
+                break;
+            default:
+                resultado = "Opção inválida. Tente novamente.";
+                break;
+        }
+
+        Console.WriteLine($"Resultado: {resultado}");
+        StateHasChanged();
+    }
+}
