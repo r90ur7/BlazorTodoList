@@ -27,3 +27,4 @@ C:\Users\gustavogoncalves\source\repos\dio\obj\Debug\net8.0\refint\dio.dll
 C:\Users\gustavogoncalves\source\repos\dio\obj\Debug\net8.0\dio.pdb
 C:\Users\gustavogoncalves\source\repos\dio\obj\Debug\net8.0\dio.genruntimeconfig.cache
 C:\Users\gustavogoncalves\source\repos\dio\obj\Debug\net8.0\ref\dio.dll
+C:\Users\gustavogoncalves\source\repos\dio\obj\Debug\net8.0\dio.sourcelink.json
