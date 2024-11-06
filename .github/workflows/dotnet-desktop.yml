@@ -18,8 +18,8 @@ jobs:
 
     env:
       Solution_Name: dio.sln
-      Wap_Project_Directory: dio
-      Wap_Project_Path: dio/dio.csproj
+      Wap_Project_Directory: BlazorTodoList
+      Wap_Project_Path: BlazorTodoList/dio.csproj
 
     steps:
     - name: Checkout
