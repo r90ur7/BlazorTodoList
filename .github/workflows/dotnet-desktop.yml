@@ -18,9 +18,6 @@ jobs:
 
     env:
       Solution_Name: dio.sln
-      Test_Project_Path: Components/Pages/Home.razor
-      Wap_Project_Directory: Components
-      Wap_Project_Path: Components/Pages/Home.razor
 
     steps:
     - name: Checkout
