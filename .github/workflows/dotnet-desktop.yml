@@ -15,9 +15,12 @@ jobs:
 
     env:
       Solution_Name: dio.sln
-      Wap_Project_Directory: Components
-      Wap_Project_Path: Components/dio.csproj
+      Wap_Project_Directory: .
+      Wap_Project_Path: dio.csproj
       DOTNET_ROOT: C:\Program Files\dotnet
+      Appx_Bundle: Always
+      Appx_Bundle_Platforms: x86|x64
+      Appx_Package_Build_Mode: StoreUpload
 
     steps:
       - name: Checkout
