@@ -15,8 +15,8 @@ jobs:
 
     env:
       Solution_Name: dio.sln
-      Wap_Project_Directory: BlazorTodoList
-      Wap_Project_Path: BlazorTodoList/dio.csproj
+      Wap_Project_Directory: Components
+      Wap_Project_Path: Components/dio.csproj
       DOTNET_ROOT: C:\Program Files\dotnet
 
     steps:
@@ -36,7 +36,7 @@ jobs:
       - name: Restore the application
         run: msbuild ${{ env.Solution_Name }} /t:Restore /p:Configuration=${{ matrix.configuration }}
         working-directory: ${{ github.workspace }}
-        continue-on-error: false  # Para parar o job em caso de erro
+        continue-on-error: false
 
       - name: Decode the pfx
         run: |
