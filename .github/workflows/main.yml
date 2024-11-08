@@ -1,7 +1,0 @@
-- name: GitHub Pages Blazor WASM
-  uses: na1307/blazor-github-pages@v2.0
-  with:
-    project-path: dio.csproj
-    publish-path: _out
-    main-repo: false
-    fix-404: true
